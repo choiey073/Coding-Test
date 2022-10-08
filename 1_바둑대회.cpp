@@ -20,10 +20,10 @@ void DFS(int L, int s){
         res = min(res, abs(sumA-sumB));
     }
     else{
-        for(int i=s;i<n;i++){
+        for(int i=s;i<n;i++){   // 조합코드! 외워놓기☆
             ch[i]=1;    // white
             DFS(L+1, i+1);
-            ch[i]=0;
+            ch[i]=0;    // black
         }
     }
 }
