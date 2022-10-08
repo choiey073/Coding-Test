@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// DFS를 이용한 조합.
+
 int n, res = 2147000000;
 int can[2][21], ch[21];
 
