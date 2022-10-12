@@ -20,12 +20,12 @@ int w, h;
 
 void BFS(int idx) {	// idx==0 : 영희->산딸기, idx==1 : 산딸기->기사
 	while (!Q.empty()) {
-		int x = Q.front().first;
-		int y = Q.front().second;
+		int x = Q.front().first;	// x좌표
+		int y = Q.front().second;	// y좌표
 		Q.pop();
 		
 		for (int i = 0; i < 4; i++) {
-			int nx = x + dx[i];
+			int nx = x + dx[i];	// 해당 위치에서 방향만큼 이동
 			int ny = y + dy[i];
 			
 			if (nx >= 0 && nx < h && ny >= 0 && ny < w && dis[idx][nx][ny] == 0) {
