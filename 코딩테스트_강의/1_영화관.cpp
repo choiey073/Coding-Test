@@ -7,6 +7,14 @@ using namespace std;
 // 백준 사이트에서 '탑'이라는 문제 풀어보기☆
 // 프로그래머스 - 주식가격
 
+/*
+input.txt
+
+7
+54 52 57 50 52 53 51
+
+*/
+
 int main() {
     ios_base::sync_with_stdio(false);   //동기화 비활성화 시켜 속도 높임.
     freopen("input.txt", "rt", stdin);
