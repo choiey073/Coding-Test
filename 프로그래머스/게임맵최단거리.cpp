@@ -3,8 +3,6 @@
 #include<iostream>
 using namespace std;
 
-// 테케 20개 중에 하나 틀림.. 뭐지?
-
 int dx[4] = {-1, 0, 1, 0};
 int dy[4] = {0, 1, 0, -1};
 bool check[101][101]={0};
@@ -13,7 +11,7 @@ int solution(vector<vector<int> > maps)
 {   
     int answer = 0;
     int n = maps.size();    //  x
-    int m = maps[1].size(); //  y
+    int m = maps[0].size(); //  y
     
     queue < pair<int,int> > Q;
     Q.push({0,0});  //  처음에 캐릭터의 위치(좌측 최상단)
