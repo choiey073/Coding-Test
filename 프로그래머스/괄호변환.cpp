@@ -49,7 +49,7 @@ string solution(string p) {
     // u가 올바른 문자열인 경우
     // 문자열 v에 대해서 재귀
     if(check(u)){
-        return u+solution(v);   // 수행한 결과 문자열을 u에 이어 붙인 후 반환
+        return u + solution(v);   // 수행한 결과 문자열을 u에 이어 붙인 후 반환
     }
     
     // 조건 4
