@@ -18,7 +18,6 @@ void DFS(int current_computer, int n,vector<vector<int>> computers){
     }
 }
 
-
 int solution(int n, vector<vector<int>> computers) {
     int answer = 0;
     
