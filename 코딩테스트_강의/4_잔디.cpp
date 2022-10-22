@@ -2,7 +2,7 @@
 using namespace std;
 //BFS
 int n, result=INT_MIN;
-int board[31][31], dist[31][31];
+
 int dx[4] = { 0, 1, 0, -1 };
 int dy[4] = { -1, 0,1, 0 };
 
@@ -12,6 +12,10 @@ int main() {
     freopen("input.txt", "rt", stdin);
     
     cin >> n;
+
+    vector < vector<int> > board(n, vector<int>(n, 0));
+    vector < vector<int> > dist(n, vector<int>(n, 0));
+
     queue <pair <int, int> > Q;
     
     for (int i = 0; i < n; i++) {
