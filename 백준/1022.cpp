@@ -4,7 +4,7 @@
 #include <algorithm>
 
 using namespace std;
-
+//소용돌이 예쁘게 출력하기
 int main()
 {
 	ios_base::sync_with_stdio(false);
