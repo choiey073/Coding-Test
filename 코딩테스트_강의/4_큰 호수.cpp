@@ -8,7 +8,7 @@ int cnt;
 void DFS(int x, int y) {
     board[x][y] = 0;
     cnt++;  // 호출 횟수 == 호수의 크기
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++) {   // 상하좌우 4방향
         if (board[x + dx[i]][y + dy[i]] == 1) {
             DFS(x + dx[i], y + dy[i]);
         }
