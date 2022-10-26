@@ -9,7 +9,7 @@ int solution(vector<int> priorities, int location) {
     priority_queue <int> pq;    // 우선순위 큐
 
     for(int i =0;i<priorities.size();i++){
-        q.push({priorities[i],i});    // i번째 원소의 우선순위와 i를 q에 넣음.
+        q.push({priorities[i],i});    // (i번째 원소의 우선순위, i번째 원소)
         pq.push(priorities[i]); // i번째 원소의 우선순위만 넣어주기
     }
     
