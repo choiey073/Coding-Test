@@ -28,7 +28,7 @@ int main() {
                 dy[i][j] = min(dy[i - 1][j - 1], min(dy[i - 1][j], dy[i][j - 1])) + 1;
             }
             else {  // i가 0이거나 j가 0일때는 i-1, j-1이 경계에서 벗어나므로 그대로 입력
-                dy[i][j] = board[i][j]-'0';
+                dy[i][j] = board[i][j]-'0'; // char을 int로 바꿔줌.
             }
         }
     }
