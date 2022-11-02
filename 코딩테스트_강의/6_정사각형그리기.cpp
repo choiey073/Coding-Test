@@ -4,6 +4,8 @@ using namespace std;
 int main() {
 
     // ios_base::sync_with_stdio(false);
+    // 위에 문장을 쓰면 scanf랑 cin을 같이 쓸 때 오류가 남.
+    // 마찬가지로 printf랑 cout을 같이 쓰면 오류가 남.
     freopen("input.txt", "rt", stdin);
 
     int n, m;
