@@ -23,6 +23,7 @@ bool BFS(int x, int y, vector<string> place){
         int y = q.front().second;
         q.pop();
         
+        // 3번 이상 방문할 필요 없음
         if(visited[x][y]>=3){
             break;
         }
@@ -39,10 +40,8 @@ bool BFS(int x, int y, vector<string> place){
             
             visited[nx][ny] = visited[x][y]+1;
             q.push({nx,ny});
-        
         }
     }
-    
     return true;
 }
 
@@ -64,8 +63,5 @@ vector<int> solution(vector<vector<string>> places) {
         else    answer.push_back(0);
         ch = true;
     }
-    
-   
-    
     return answer;
 }
