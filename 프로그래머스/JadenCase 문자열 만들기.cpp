@@ -10,6 +10,8 @@ string solution(string s) {
     
     // 처음부터 끝까지 일단 소문자로 바꿔주기
     transform(s.begin(), s.end(), s.begin(), ::tolower);
+
+    // 첫 단어의 문자가 알파벳이라면 대문자로 바꿔주기(알파벳인지 확인)
     if(isalpha(s[0]))   s[0] = toupper(s[0]);
     
     // 모든 단어의 첫 문자만 대문자로 바꿔주기
