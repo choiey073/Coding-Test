@@ -3,6 +3,10 @@
 
 using namespace std;
 
+// 'O'인 경우 상하좌우에서 'P'가 두개 이상 나오면 거리두기를 지키지 않은 것
+// 'P'인 경우 상하좌우에서 'P'가 1개 이상 나오면 거리두기를 지키지 않은 것
+// 'X'인 경우 상하좌우에 'P'가 몇개라도 상관 없음
+
 int dx[4]={-1,1,0,0};
 int dy[4]={0,0,1,-1};
 
@@ -17,7 +21,7 @@ bool BFS(int x, int y, vector<string> place){
             if(place[xx][yy] == 'P'){
                 f++;
             }
-            if(place[x][y]=='0'){
+            if(place[x][y]=='O'){
                 if(f==2){
                     return false;
                 }
@@ -37,8 +41,8 @@ vector<int> solution(vector<vector<string>> places) {
     bool ch = true;
     
     for(auto place : places){
-        for(int i =0;i<5;i++){
-            for(int j =0;j<5;j++){
+        for(int i =0;i<5&&ch;i++){
+            for(int j =0;j<5&&ch;j++){
                 if(place[i][j] !='X'){
                     ch = BFS(i,j,place);
                 }

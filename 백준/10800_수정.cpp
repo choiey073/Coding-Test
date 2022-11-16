@@ -39,27 +39,20 @@ int main() {
 	sort(ball.begin(), ball.end());
 	
 	int j = 0;
-	//이건 틀림..
-	// 뭐가 틀린거지?
+	// 이중 for문으로 완전탐색
 	for (int i = 1; i < n; i++) {
-		if (ball[i].weight > ball[j].weight) {
+		for(; j < i ; j++){
+			if (ball[i].weight > ball[j].weight) {
 			sum += ball[j].weight;
 			color[ball[j].color] += ball[j].weight;
-			j++;
+			}
+			else{
+				break;
+			}
 		}
 		result[ball[i].num] = sum - color[ball[i].color];
 	}
 	
-	/*
-	// 이렇게 하면 맞았다고 나옴.
-	for (int i = 1; i < n; i++) {
-		for (; ball[i].weight> ball[j].weight; j++){
-			sum += ball[j].weight;
-			color[ball[j].color] += ball[j].weight;
-		}
-		result[ball[i].num] = sum - color[ball[i].color];
-	}
-	*/
 	for (int i = 0; i < n; i++) {
 		printf("%d\n", result[i]);
 	}
