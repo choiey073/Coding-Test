@@ -17,7 +17,7 @@ int main(int argc, char** argv)
 		cin >> n;
 		long long result = 0;
 		vector <int> price;
-		stack <int> st;
+		// stack <int> st;
 
 		for (int i = 0; i < n; i++) {
 			int p;
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
 				max_price = price[i];
 			}
 		}
-		cout << "#" <<test_case <<" " << result << endl;
+		cout << "#" <<test_case << " " << result << endl;
 	}
 	return 0;//정상종료시 반드시 0을 리턴해야합니다.
 }

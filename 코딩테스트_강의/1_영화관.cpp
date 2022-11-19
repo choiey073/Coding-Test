@@ -31,7 +31,7 @@ int main() {
 	}
 	
 	for(int i =n; i>=1;i--){
-	    while(!s.empty() && h[i]>h[s.top()]){
+	    while(!s.empty() && h[i]<h[s.top()]){
     	    // stack이 비어있지 않을 때 + stack의 가장 위(top)의 학생의 방해학생일 때
 	        result[s.top()]=i; // 결과 기록
 	        s.pop();
