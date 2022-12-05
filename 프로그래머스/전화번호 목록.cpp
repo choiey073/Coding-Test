@@ -2,7 +2,8 @@
 #include <vector>
 #include <unordered_map>
 using namespace std;
-//해시
+// 1.해시
+// 2. string 정렬 후 차례로 검색하기
 bool solution(vector<string> phone_book) {
     unordered_map <string, int> hash_map;
     
