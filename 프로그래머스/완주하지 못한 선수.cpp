@@ -9,15 +9,18 @@ string solution(vector<string> participant, vector<string> completion) {
     
     unordered_map <string, int> map;
     
-    for(auto name : participant){
+    for(auto name : participant)
+    {
         map[name]++;
     }
     
-    for (auto player : completion){
+    for (auto player : completion)
+    {
         map[player]--;
     }
     
-    for(auto name : participant){
+    for(auto name : participant)
+    {
         if(map[name]>0){
             answer = name;
             break;
